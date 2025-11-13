@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import Header from "../components/sections/Header";
 
 import TeamCard from "../components/cards/TeamCard";
@@ -12,6 +12,13 @@ export default function BrandingTeam() {
   const bgRef = useRef(null);
   const statRefs = useRef([]);
 
+  const [preloading, setPreloading] = useState(true);
+  
+    // simulate preloader similar to original page image overlay
+    useEffect(() => {
+      const t = setTimeout(() => setPreloading(false), 600);
+      return () => clearTimeout(t);
+    }, []);
   // parallax using rAF
   useEffect(() => {
     let ticking = false;
@@ -85,7 +92,14 @@ export default function BrandingTeam() {
 
   return (
     <>
+    
       <Header />
+
+{preloading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
+          <img src="/images/Branding_team.png" alt="Loading" className="w-56 h-auto animate-fadeUp" />
+        </div>
+      )}
 
       <main className="relative overflow-hidden">
         {/* Hero */}

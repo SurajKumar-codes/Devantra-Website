@@ -7,7 +7,13 @@ import { teamMembers } from "../CustomData/technicalTeamMembers";
 export default function TechnicalTeam() {
   const bgRef = useRef(null);
   const statRefs = useRef([]);
+const [preloading, setPreloading] = useState(true);
 
+  // simulate preloader similar to original page image overlay
+  useEffect(() => {
+    const t = setTimeout(() => setPreloading(false), 600);
+    return () => clearTimeout(t);
+  }, []);
   // Hero parallax (requestAnimationFrame friendly)
   useEffect(() => {
     let ticking = false;
@@ -75,6 +81,12 @@ export default function TechnicalTeam() {
   return (
     <>
       <Header />
+      {/* preloader overlay */}
+      {preloading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
+          <img src="/images/tech_logo.png" alt="Loading" className="w-56 h-auto animate-fadeUp" />
+        </div>
+      )}
       <main className="relative">
         {/* Hero */}
         <section className="relative min-h-[64vh] flex items-center pt-[110px] pb-12 overflow-hidden">

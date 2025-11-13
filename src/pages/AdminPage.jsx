@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState,useEffect } from "react";
 import Sidebar from "../components/admin/Sidebar";
 import Topbar from "../components/admin/Topbar";
 import Overview from "../components/admin/Overview";
@@ -18,6 +18,14 @@ export default function AdminDashboard() {
   const [search, setSearch] = useState("");
   const [kpis, setKpis] = useState({ activeUsers: 0, pendingPosts: 0, reports: 0 });
 
+  const [preloading , setPreloading] = useState(true);
+    
+      // simulate preloader similar to original page image overlay
+      useEffect(() => {
+        const t = setTimeout(() => setPreloading(false), 600);
+        return () => clearTimeout(t);
+      }, []);
+
   const content = useMemo(() => null, []); // placeholder for possible future props
 
   async function resetData() {
@@ -27,7 +35,13 @@ export default function AdminDashboard() {
   }
 
   return (
+    
     <div className="min-h-screen bg-[var(--bg)] text-white flex">
+{preloading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
+          <img src="/images/Admin_dashboard.png" alt="Loading" className="w-56 h-auto animate-fadeUp" />
+        </div>
+      )}
       <Sidebar active={tab} onChange={setTab} />
       <div className="flex-1">
         <Topbar search={search} onSearch={setSearch} kpis={kpis} />
