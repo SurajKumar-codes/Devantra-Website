@@ -171,7 +171,9 @@ const Header = () => {
                         className="navbar_link-item"
                       >
                         <div className="navbar_link-icon">
-                          <div className="w-8 h-8 bg-linear-to-br from-orange-500 to-yellow-500 rounded"></div>
+                          <div className="w-8 h-8 bg-linear-to-br from-orange-500 to-yellow-500 rounded">
+                          <img src={link.img} alt="" />
+                          </div>
                         </div>
                         <div>
                           <div className="navbar_link-heading">{link.title}</div>
