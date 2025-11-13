@@ -1,0 +1,51 @@
+// Data for Branding Team page
+export const brandingTeamMembers = [
+  {
+    id: 1,
+    name: "Ishaan Ahuja",
+    role: "Creative Director",
+    bio: "Leads creative vision and oversees all branding initiatives.",
+    skills: ["Brand Strategy", "Creative Direction", "Leadership"],
+    roleSlug: "creative-director",
+  },
+  {
+    id: 2,
+    name: "Dia Nair",
+    role: "Graphic Designer",
+    bio: "Creates stunning visuals and brand assets that stand out.",
+    skills: ["Illustrator", "Photoshop", "InDesign"],
+    roleSlug: "graphic-designer",
+  },
+  {
+    id: 3,
+    name: "Ravi Joshi",
+    role: "Brand Strategist",
+    bio: "Develops comprehensive brand strategies and positioning.",
+    skills: ["Strategy", "Research", "Analysis"],
+    roleSlug: "brand-strategist",
+  },
+  {
+    id: 4,
+    name: "Zara Khan",
+    role: "Motion Designer",
+    bio: "Brings brands to life with dynamic animations and motion graphics.",
+    skills: ["After Effects", "Premiere Pro", "Cinema 4D"],
+    roleSlug: "motion-designer",
+  },
+  {
+    id: 5,
+    name: "Maya Desai",
+    role: "Content Creator",
+    bio: "Produces engaging content and manages visual storytelling.",
+    skills: ["Photography", "Videography", "Editing"],
+    roleSlug: "content-creator",
+  },
+  {
+    id: 6,
+    name: "Karan Bhatia",
+    role: "Web Designer",
+    bio: "Designs beautiful and functional web experiences.",
+    skills: ["UI/UX", "Figma", "Webflow"],
+    roleSlug: "web-designer",
+  },
+];

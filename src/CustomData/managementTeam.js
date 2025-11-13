@@ -1,0 +1,51 @@
+// Data for Management Team page
+export const managementTeamMembers = [
+  {
+    id: 1,
+    name: "Rajesh Kumar",
+    role: "Chief Executive Officer",
+    bio: "Visionary leader with 15+ years in tech industry, driving strategic growth and innovation at Devantra.",
+    skills: ["Strategy", "Leadership", "Innovation"],
+    roleSlug: "ceo",
+  },
+  {
+    id: 2,
+    name: "Priya Sharma",
+    role: "Chief Technology Officer",
+    bio: "Tech visionary overseeing all technological initiatives and ensuring cutting-edge solutions for our community.",
+    skills: ["Technology", "Architecture", "Innovation"],
+    roleSlug: "cto",
+  },
+  {
+    id: 3,
+    name: "Amit Patel",
+    role: "Chief Operating Officer",
+    bio: "Operations expert ensuring smooth day-to-day activities and efficient resource management across all departments.",
+    skills: ["Operations", "Management", "Efficiency"],
+    roleSlug: "coo",
+  },
+  {
+    id: 4,
+    name: "Neha Singh",
+    role: "Chief Marketing Officer",
+    bio: "Marketing strategist developing innovative campaigns to grow our community and enhance brand presence globally.",
+    skills: ["Marketing", "Branding", "Growth"],
+    roleSlug: "cmo",
+  },
+  {
+    id: 5,
+    name: "Vikram Malhotra",
+    role: "Head of Human Resources",
+    bio: "People-focused leader building a strong team culture and ensuring member satisfaction across the community.",
+    skills: ["HR", "Culture", "Development"],
+    roleSlug: "hr",
+  },
+  {
+    id: 6,
+    name: "Kavita Desai",
+    role: "Chief Financial Officer",
+    bio: "Financial expert managing budgets, investments, and ensuring sustainable growth for our organization.",
+    skills: ["Finance", "Planning", "Analysis"],
+    roleSlug: "finance",
+  },
+];
